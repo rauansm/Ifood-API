@@ -1,12 +1,11 @@
 package br.com.ifood.grupo.application.api;
 
+import br.com.ifood.grupo.application.api.dto.GrupoPermissaoResponse;
+import br.com.ifood.grupo.application.api.dto.GrupoRequest;
+import br.com.ifood.grupo.application.api.dto.GrupoResponse;
 import br.com.ifood.grupo.application.service.GrupoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;

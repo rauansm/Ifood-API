@@ -1,5 +1,7 @@
 package br.com.ifood.produto.application.api;
 
+import br.com.ifood.produto.application.api.dto.ProdutoRequest;
+import br.com.ifood.produto.application.api.dto.ProdutoResponse;
 import br.com.ifood.produto.application.service.ProdutoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

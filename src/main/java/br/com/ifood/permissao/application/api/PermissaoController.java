@@ -1,5 +1,6 @@
 package br.com.ifood.permissao.application.api;
 
+import br.com.ifood.permissao.application.api.dto.PermissaoResponse;
 import br.com.ifood.permissao.application.service.PermissaoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

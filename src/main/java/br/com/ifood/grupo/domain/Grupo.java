@@ -1,6 +1,6 @@
 package br.com.ifood.grupo.domain;
 
-import br.com.ifood.grupo.application.api.GrupoRequest;
+import br.com.ifood.grupo.application.api.dto.GrupoRequest;
 import br.com.ifood.permissao.domain.Permissao;
 import lombok.AccessLevel;
 import lombok.Data;

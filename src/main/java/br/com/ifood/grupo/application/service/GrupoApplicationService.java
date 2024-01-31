@@ -1,10 +1,10 @@
 package br.com.ifood.grupo.application.service;
 
-import br.com.ifood.grupo.application.api.GrupoRequest;
-import br.com.ifood.grupo.application.api.GrupoResponse;
+import br.com.ifood.grupo.application.api.dto.GrupoRequest;
+import br.com.ifood.grupo.application.api.dto.GrupoResponse;
 import br.com.ifood.grupo.application.repository.GrupoRepository;
 import br.com.ifood.grupo.domain.Grupo;
-import br.com.ifood.grupo.application.api.GrupoPermissaoResponse;
+import br.com.ifood.grupo.application.api.dto.GrupoPermissaoResponse;
 import br.com.ifood.permissao.application.repository.PermissaoRepository;
 import br.com.ifood.permissao.domain.Permissao;
 import lombok.RequiredArgsConstructor;

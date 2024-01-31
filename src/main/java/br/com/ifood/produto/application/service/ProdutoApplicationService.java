@@ -1,9 +1,7 @@
 package br.com.ifood.produto.application.service;
 
-import br.com.ifood.fotoproduto.domain.FotoProduto;
-import br.com.ifood.fotoproduto.application.api.FotoProdutoRequest;
-import br.com.ifood.produto.application.api.ProdutoRequest;
-import br.com.ifood.produto.application.api.ProdutoResponse;
+import br.com.ifood.produto.application.api.dto.ProdutoRequest;
+import br.com.ifood.produto.application.api.dto.ProdutoResponse;
 import br.com.ifood.produto.application.repository.ProdutoRepository;
 import br.com.ifood.produto.domain.Produto;
 import br.com.ifood.restaurante.application.repository.RestauranteRepository;

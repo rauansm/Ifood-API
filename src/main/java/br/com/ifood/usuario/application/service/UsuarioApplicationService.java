@@ -2,7 +2,7 @@ package br.com.ifood.usuario.application.service;
 
 import br.com.ifood.grupo.application.repository.GrupoRepository;
 import br.com.ifood.grupo.domain.Grupo;
-import br.com.ifood.usuario.application.api.*;
+import br.com.ifood.usuario.application.api.dto.*;
 import br.com.ifood.usuario.application.repository.UsuarioRepository;
 import br.com.ifood.usuario.domain.Usuario;
 import lombok.RequiredArgsConstructor;

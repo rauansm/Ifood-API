@@ -2,9 +2,9 @@ package br.com.ifood.usuario.domain;
 
 import br.com.ifood.grupo.domain.Grupo;
 import br.com.ifood.handler.APIException;
-import br.com.ifood.usuario.application.api.AlteraUsuarioRequest;
-import br.com.ifood.usuario.application.api.SenhaAlteracaoRequest;
-import br.com.ifood.usuario.application.api.UsuarioRequest;
+import br.com.ifood.usuario.application.api.dto.AlteraUsuarioRequest;
+import br.com.ifood.usuario.application.api.dto.SenhaAlteracaoRequest;
+import br.com.ifood.usuario.application.api.dto.UsuarioRequest;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;

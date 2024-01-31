@@ -1,5 +1,7 @@
 package br.com.ifood.formapagamento.application.api;
 
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoRequest;
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoResponse;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

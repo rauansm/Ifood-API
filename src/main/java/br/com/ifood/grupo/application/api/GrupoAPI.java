@@ -1,5 +1,8 @@
 package br.com.ifood.grupo.application.api;
 
+import br.com.ifood.grupo.application.api.dto.GrupoPermissaoResponse;
+import br.com.ifood.grupo.application.api.dto.GrupoRequest;
+import br.com.ifood.grupo.application.api.dto.GrupoResponse;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

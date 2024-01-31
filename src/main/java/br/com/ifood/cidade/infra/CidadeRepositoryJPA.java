@@ -22,7 +22,7 @@ public class CidadeRepositoryJPA implements CidadeRepository {
 
     @Override
     public Cidade salva(Cidade cidade) {
-        log.info("[inicio] CidadeRepositoryJPA - salva");
+        log.info("[inicia] CidadeRepositoryJPA - salva");
         Cidade cidadeCriada = cidadeSpringDataJPA.save(cidade);
         log.info("[finaliza] CidadeRepositoryJPA - salva");
         return cidadeCriada;
@@ -30,7 +30,7 @@ public class CidadeRepositoryJPA implements CidadeRepository {
 
     @Override
     public List<Cidade> buscaTodasCidades() {
-        log.info("[inicio] CidadeRepositoryJPA - buscaTodasCidades");
+        log.info("[inicia] CidadeRepositoryJPA - buscaTodasCidades");
         List<Cidade> cidades = cidadeSpringDataJPA.findAll();
         log.info("[finaliza] CidadeRepositoryJPA - buscaTodasCidades");
         return cidades;
@@ -38,7 +38,7 @@ public class CidadeRepositoryJPA implements CidadeRepository {
 
     @Override
     public Cidade buscaCidadeAtravesId(Long idCidade) {
-        log.info("[inicio] CidadeRepositoryJPA - buscaCidadeAtravesId");
+        log.info("[inicia] CidadeRepositoryJPA - buscaCidadeAtravesId");
         Optional<Cidade> cidade = cidadeSpringDataJPA.findById(idCidade);
         log.info("[finaliza] CidadeRepositoryJPA - buscaCidadeAtravesId");
         return cidade.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Cidade de Id %s não encontrada", idCidade)));
@@ -47,7 +47,7 @@ public class CidadeRepositoryJPA implements CidadeRepository {
     @Override
     public void deletaCidade(Cidade cidade) {
        try {
-           log.info("[inicio] CidadeRepositoryJPA - deletaCidadeAtravesId");
+           log.info("[inicia] CidadeRepositoryJPA - deletaCidadeAtravesId");
            cidadeSpringDataJPA.delete(cidade);
            cidadeSpringDataJPA.flush();
            log.info("[finaliza] CidadeRepositoryJPA - deletaCidadeAtravesId");

@@ -1,15 +1,13 @@
 package br.com.ifood.formapagamento.domain;
 
-import br.com.ifood.formapagamento.application.api.FormaPagamentoRequest;
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoRequest;
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
 @Entity
 @Data

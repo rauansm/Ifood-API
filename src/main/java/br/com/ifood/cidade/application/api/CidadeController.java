@@ -1,5 +1,6 @@
 package br.com.ifood.cidade.application.api;
 
+import br.com.ifood.cidade.application.api.dto.*;
 import br.com.ifood.cidade.application.service.CidadeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -17,7 +18,7 @@ public class CidadeController implements CidadeAPI{
 
     @Override
     public CidadeResponse postCidade(CidadeRequest cidadeRequest) {
-        log.info("[inicio] CidadeController - postCidade");
+        log.info("[inicia] CidadeController - postCidade");
         CidadeResponse cidadeCriada = cidadeService.criaCidade(cidadeRequest);
         log.info("[finaliza] CidadeController - postCidade");
         return cidadeCriada;
@@ -25,7 +26,7 @@ public class CidadeController implements CidadeAPI{
 
     @Override
     public List<CidadeListResponse> getTodasCidades() {
-        log.info("[inicio] CidadeController - getTodasCidades");
+        log.info("[inicia] CidadeController - getTodasCidades");
         List<CidadeListResponse> cidades = cidadeService.listaTodasCidades();
         log.info("[finaliza] CidadeController - getTodasCidades");
         return cidades;
@@ -33,7 +34,7 @@ public class CidadeController implements CidadeAPI{
 
     @Override
     public CidadeDetalhadaReponse getCidadeAtravesId(Long idCidade) {
-        log.info("[inicio] CidadeController - getCidadeAtravesId");
+        log.info("[inicia] CidadeController - getCidadeAtravesId");
         CidadeDetalhadaReponse cidade = cidadeService.buscaCidadeAtravesId(idCidade);
         log.info("[finaliza] CidadeController - getCidadeAtravesId");
         return cidade;
@@ -41,7 +42,7 @@ public class CidadeController implements CidadeAPI{
 
     @Override
     public void deletaCidadeAtravesId(Long idCidade) {
-        log.info("[inicio] CidadeController - deletaCidadeAtravesId");
+        log.info("[inicia] CidadeController - deletaCidadeAtravesId");
         cidadeService.deletaCidadeAtravesId(idCidade);
         log.info("[finaliza] CidadeController - deletaCidadeAtravesId");
 
@@ -49,7 +50,7 @@ public class CidadeController implements CidadeAPI{
 
     @Override
     public void patchAlteraCidade(Long idCidade, CidadeAlteracaoRequest cidadeAlteracaoRequest) {
-        log.info("[inicio] CidadeController - patchAlteraCidade");
+        log.info("[inicia] CidadeController - patchAlteraCidade");
         cidadeService.alteraCidade(idCidade,cidadeAlteracaoRequest);
         log.info("[finaliza] CidadeController - patchAlteraCidade");
     }

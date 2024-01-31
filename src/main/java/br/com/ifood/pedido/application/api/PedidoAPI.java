@@ -1,6 +1,10 @@
 package br.com.ifood.pedido.application.api;
 
 import br.com.ifood.filtro.PedidoFiltro;
+import br.com.ifood.pedido.application.api.dto.PedidoDetalhadoResponse;
+import br.com.ifood.pedido.application.api.dto.PedidoListResponse;
+import br.com.ifood.pedido.application.api.dto.PedidoRequest;
+import br.com.ifood.pedido.application.api.dto.PedidoResponse;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

@@ -1,6 +1,6 @@
 package br.com.ifood.produto.domain;
 
-import br.com.ifood.produto.application.api.ProdutoRequest;
+import br.com.ifood.produto.application.api.dto.ProdutoRequest;
 import br.com.ifood.restaurante.domain.Restaurante;
 import lombok.AccessLevel;
 import lombok.Data;

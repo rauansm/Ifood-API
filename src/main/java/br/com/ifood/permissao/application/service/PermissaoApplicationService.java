@@ -1,6 +1,6 @@
 package br.com.ifood.permissao.application.service;
 
-import br.com.ifood.permissao.application.api.PermissaoResponse;
+import br.com.ifood.permissao.application.api.dto.PermissaoResponse;
 import br.com.ifood.permissao.application.repository.PermissaoRepository;
 import br.com.ifood.permissao.domain.Permissao;
 import lombok.RequiredArgsConstructor;

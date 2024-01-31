@@ -4,7 +4,7 @@ import br.com.ifood.cidade.domain.Cidade;
 import br.com.ifood.endereco.domain.Endereco;
 import br.com.ifood.formapagamento.domain.FormaPagamento;
 import br.com.ifood.handler.APIException;
-import br.com.ifood.pedido.application.api.PedidoRequest;
+import br.com.ifood.pedido.application.api.dto.PedidoRequest;
 import br.com.ifood.restaurante.domain.Restaurante;
 import br.com.ifood.usuario.domain.Usuario;
 import lombok.AccessLevel;

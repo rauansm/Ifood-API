@@ -6,7 +6,7 @@ import br.com.ifood.endereco.domain.Endereco;
 import br.com.ifood.formapagamento.domain.FormaPagamento;
 import br.com.ifood.handler.APIException;
 import br.com.ifood.produto.domain.Produto;
-import br.com.ifood.restaurante.application.api.RestauranteRequest;
+import br.com.ifood.restaurante.application.api.dto.RestauranteRequest;
 import br.com.ifood.usuario.domain.Usuario;
 import lombok.Data;
 import lombok.NoArgsConstructor;

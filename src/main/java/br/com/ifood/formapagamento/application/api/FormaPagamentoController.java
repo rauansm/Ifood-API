@@ -1,5 +1,7 @@
 package br.com.ifood.formapagamento.application.api;
 
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoRequest;
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoResponse;
 import br.com.ifood.formapagamento.application.service.FormaPagamentoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

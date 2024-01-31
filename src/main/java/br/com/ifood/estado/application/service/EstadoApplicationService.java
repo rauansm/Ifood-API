@@ -1,6 +1,6 @@
 package br.com.ifood.estado.application.service;
 
-import br.com.ifood.estado.application.api.*;
+import br.com.ifood.estado.application.api.dto.*;
 import br.com.ifood.estado.application.repository.EstadoRepository;
 import br.com.ifood.estado.domain.Estado;
 import lombok.RequiredArgsConstructor;

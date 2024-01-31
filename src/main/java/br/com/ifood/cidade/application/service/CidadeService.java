@@ -1,6 +1,6 @@
 package br.com.ifood.cidade.application.service;
 
-import br.com.ifood.cidade.application.api.*;
+import br.com.ifood.cidade.application.api.dto.*;
 
 import java.util.List;
 

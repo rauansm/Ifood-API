@@ -1,5 +1,6 @@
 package br.com.ifood.estado.application.api;
 
+import br.com.ifood.estado.application.api.dto.*;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -5,7 +5,7 @@ import br.com.ifood.cidade.domain.Cidade;
 import br.com.ifood.filtro.PedidoFiltro;
 import br.com.ifood.formapagamento.application.repository.FormaPagamentoRepository;
 import br.com.ifood.formapagamento.domain.FormaPagamento;
-import br.com.ifood.pedido.application.api.*;
+import br.com.ifood.pedido.application.api.dto.*;
 import br.com.ifood.pedido.application.repository.PedidoRepository;
 import br.com.ifood.pedido.domain.ItemPedido;
 import br.com.ifood.pedido.domain.Pedido;

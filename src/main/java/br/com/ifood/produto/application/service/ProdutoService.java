@@ -1,8 +1,7 @@
 package br.com.ifood.produto.application.service;
 
-import br.com.ifood.fotoproduto.application.api.FotoProdutoRequest;
-import br.com.ifood.produto.application.api.ProdutoRequest;
-import br.com.ifood.produto.application.api.ProdutoResponse;
+import br.com.ifood.produto.application.api.dto.ProdutoRequest;
+import br.com.ifood.produto.application.api.dto.ProdutoResponse;
 
 import java.util.List;
 

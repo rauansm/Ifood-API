@@ -1,6 +1,6 @@
 package br.com.ifood.restaurante.application.service;
 
-import br.com.ifood.restaurante.application.api.*;
+import br.com.ifood.restaurante.application.api.dto.*;
 
 import java.util.Collection;
 import java.util.List;

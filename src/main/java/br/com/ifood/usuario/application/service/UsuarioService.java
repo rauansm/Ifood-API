@@ -1,6 +1,6 @@
 package br.com.ifood.usuario.application.service;
 
-import br.com.ifood.usuario.application.api.*;
+import br.com.ifood.usuario.application.api.dto.*;
 
 import java.util.List;
 

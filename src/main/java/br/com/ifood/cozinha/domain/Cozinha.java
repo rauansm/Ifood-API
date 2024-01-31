@@ -1,7 +1,7 @@
 package br.com.ifood.cozinha.domain;
 
-import br.com.ifood.cozinha.application.api.CozinhaAlteracaoRequest;
-import br.com.ifood.cozinha.application.api.CozinhaRequest;
+import br.com.ifood.cozinha.application.api.dto.CozinhaAlteracaoRequest;
+import br.com.ifood.cozinha.application.api.dto.CozinhaRequest;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Getter;

@@ -1,11 +1,11 @@
 package br.com.ifood.fotoproduto.application.service;
 
-import br.com.ifood.fotoproduto.application.api.FotoProdutoRequest;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoRequest;
 import br.com.ifood.fotoproduto.application.repository.FotoProdutoRepository;
 import br.com.ifood.fotoproduto.domain.FotoProduto;
 import br.com.ifood.fotoproduto.infra.FotoStorage;
 import br.com.ifood.produto.application.repository.ProdutoRepository;
-import br.com.ifood.fotoproduto.application.api.FotoProdutoResponse;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoResponse;
 import br.com.ifood.produto.domain.Produto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

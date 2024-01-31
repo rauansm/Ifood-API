@@ -6,7 +6,7 @@ import br.com.ifood.cidade.application.repository.CidadeRepository;
 import br.com.ifood.cidade.domain.Cidade;
 import br.com.ifood.formapagamento.application.repository.FormaPagamentoRepository;
 import br.com.ifood.formapagamento.domain.FormaPagamento;
-import br.com.ifood.restaurante.application.api.*;
+import br.com.ifood.restaurante.application.api.dto.*;
 import br.com.ifood.restaurante.application.repository.RestauranteRepository;
 import br.com.ifood.restaurante.domain.Restaurante;
 import br.com.ifood.usuario.application.repository.UsuarioRepository;

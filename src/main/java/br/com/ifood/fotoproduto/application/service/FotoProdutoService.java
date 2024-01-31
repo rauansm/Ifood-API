@@ -1,7 +1,7 @@
 package br.com.ifood.fotoproduto.application.service;
 
-import br.com.ifood.fotoproduto.application.api.FotoProdutoRequest;
-import br.com.ifood.fotoproduto.application.api.FotoProdutoResponse;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoRequest;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoResponse;
 import br.com.ifood.fotoproduto.infra.FotoStorage;
 
 import java.io.IOException;

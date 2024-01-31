@@ -1,5 +1,7 @@
 package br.com.ifood.fotoproduto.application.api;
 
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoRequest;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoResponse;
 import br.com.ifood.fotoproduto.application.service.FotoProdutoService;
 import br.com.ifood.fotoproduto.infra.FotoStorage;
 import lombok.RequiredArgsConstructor;

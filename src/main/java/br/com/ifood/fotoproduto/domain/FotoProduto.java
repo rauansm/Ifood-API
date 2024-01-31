@@ -1,6 +1,6 @@
 package br.com.ifood.fotoproduto.domain;
 
-import br.com.ifood.fotoproduto.application.api.FotoProdutoRequest;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoRequest;
 import br.com.ifood.produto.domain.Produto;
 import lombok.AccessLevel;
 import lombok.Getter;

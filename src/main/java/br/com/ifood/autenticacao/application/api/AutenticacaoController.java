@@ -1,5 +1,7 @@
 package br.com.ifood.autenticacao.application.api;
 
+import br.com.ifood.autenticacao.application.api.dto.AutenticacaoRequest;
+import br.com.ifood.autenticacao.application.api.dto.TokenResponse;
 import br.com.ifood.autenticacao.application.service.AutenticacaoService;
 import br.com.ifood.handler.APIException;
 import br.com.ifood.handler.ProblemType;

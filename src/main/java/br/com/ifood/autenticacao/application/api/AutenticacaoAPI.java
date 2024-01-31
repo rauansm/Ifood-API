@@ -1,5 +1,7 @@
 package br.com.ifood.autenticacao.application.api;
 
+import br.com.ifood.autenticacao.application.api.dto.AutenticacaoRequest;
+import br.com.ifood.autenticacao.application.api.dto.TokenResponse;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

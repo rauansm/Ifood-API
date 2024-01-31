@@ -1,5 +1,6 @@
 package br.com.ifood.permissao.application.api;
 
+import br.com.ifood.permissao.application.api.dto.PermissaoResponse;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

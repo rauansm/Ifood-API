@@ -1,5 +1,6 @@
 package br.com.ifood.cidade.application.api;
 
+import br.com.ifood.cidade.application.api.dto.*;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
 package br.com.ifood.estado.domain;
 
-import br.com.ifood.estado.application.api.EstadoAlteracaoRequest;
-import br.com.ifood.estado.application.api.EstadoRequest;
+import br.com.ifood.estado.application.api.dto.EstadoAlteracaoRequest;
+import br.com.ifood.estado.application.api.dto.EstadoRequest;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;

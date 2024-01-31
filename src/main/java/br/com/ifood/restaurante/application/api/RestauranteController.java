@@ -1,5 +1,6 @@
 package br.com.ifood.restaurante.application.api;
 
+import br.com.ifood.restaurante.application.api.dto.*;
 import br.com.ifood.restaurante.application.service.RestauranteService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;

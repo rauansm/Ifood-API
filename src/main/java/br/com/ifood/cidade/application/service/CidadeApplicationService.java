@@ -1,6 +1,6 @@
 package br.com.ifood.cidade.application.service;
 
-import br.com.ifood.cidade.application.api.*;
+import br.com.ifood.cidade.application.api.dto.*;
 import br.com.ifood.cidade.application.repository.CidadeRepository;
 import br.com.ifood.cidade.domain.Cidade;
 import br.com.ifood.estado.application.repository.EstadoRepository;
@@ -22,7 +22,7 @@ public class CidadeApplicationService implements CidadeService{
     @Transactional
     @Override
     public CidadeResponse criaCidade(CidadeRequest cidadeRequest) {
-        log.info("[inicio] CidadeApplicationService - criaCidade");
+        log.info("[inicia] CidadeApplicationService - criaCidade");
         Estado estado = estadoRepository.buscaEstadoAtravesId(cidadeRequest.getEstado().getIdEstado());
         Cidade cidade = cidadeRepository.salva(new Cidade(cidadeRequest,estado));
         log.info("[finaliza] CidadeApplicationService - criaCidade");
@@ -35,7 +35,7 @@ public class CidadeApplicationService implements CidadeService{
 
     @Override
     public List<CidadeListResponse> listaTodasCidades() {
-        log.info("[inicio] CidadeApplicationService - listaTodasCidades");
+        log.info("[inicia] CidadeApplicationService - listaTodasCidades");
         List<Cidade> cidades = cidadeRepository.buscaTodasCidades();
         log.info("[finaliza] CidadeApplicationService - listaTodasCidades");
         return CidadeListResponse.converte(cidades);
@@ -43,7 +43,7 @@ public class CidadeApplicationService implements CidadeService{
 
     @Override
     public CidadeDetalhadaReponse buscaCidadeAtravesId(Long idCidade) {
-        log.info("[inicio] CidadeApplicationService - buscaCidadeAtravesId");
+        log.info("[inicia] CidadeApplicationService - buscaCidadeAtravesId");
         Cidade cidade = cidadeRepository.buscaCidadeAtravesId(idCidade);
         log.info("[finaliza] CidadeApplicationService - buscaCidadeAtravesId");
         return new CidadeDetalhadaReponse(cidade);
@@ -51,7 +51,7 @@ public class CidadeApplicationService implements CidadeService{
     @Transactional
     @Override
     public void deletaCidadeAtravesId(Long idCidade) {
-        log.info("[inicio] CidadeApplicationService - deletaCidadeAtravesId");
+        log.info("[inicia] CidadeApplicationService - deletaCidadeAtravesId");
         Cidade cidade = cidadeRepository.buscaCidadeAtravesId(idCidade);
         cidadeRepository.deletaCidade(cidade);
         log.info("[finaliza] CidadeApplicationService - deletaCidadeAtravesId");
@@ -60,7 +60,7 @@ public class CidadeApplicationService implements CidadeService{
     @Transactional
     @Override
     public void alteraCidade(Long idCidade, CidadeAlteracaoRequest cidadeAlteracaoRequest) {
-        log.info("[inicio] CidadeApplicationService - alteraCidade");
+        log.info("[inicia] CidadeApplicationService - alteraCidade");
         Cidade cidade = cidadeRepository.buscaCidadeAtravesId(idCidade);
         Estado estado = estadoRepository.buscaEstadoAtravesId(cidadeAlteracaoRequest.getEstado().getIdEstado());
         cidade.altera(cidadeAlteracaoRequest,estado);

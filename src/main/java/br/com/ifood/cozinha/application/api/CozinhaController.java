@@ -1,5 +1,6 @@
 package br.com.ifood.cozinha.application.api;
 
+import br.com.ifood.cozinha.application.api.dto.*;
 import br.com.ifood.cozinha.application.service.CozinhaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -16,7 +17,7 @@ public class CozinhaController implements CozinhaAPI {
 
     @Override
     public CozinhaResponse postCozinha(CozinhaRequest cozinhaRequest) {
-        log.info("[inicio] CozinhaController - postCozinha");
+        log.info("[inicia] CozinhaController - postCozinha");
         CozinhaResponse cozinhaCriada = cozinhaService.criaCozinha(cozinhaRequest);
         log.info("[finaliza] CozinhaController - postCozinha");
         return cozinhaCriada;
@@ -24,7 +25,7 @@ public class CozinhaController implements CozinhaAPI {
 
     @Override
     public List<CozinhaListResponse> getTodasCozinhas() {
-        log.info("[inicio] CozinhaController - getTodasCozinhas");
+        log.info("[inicia] CozinhaController - getTodasCozinhas");
         List<CozinhaListResponse> cozinhas = cozinhaService.listaTodasCozinhas();
         log.info("[finaliza] CozinhaController - getTodasCozinhas");
         return cozinhas;
@@ -32,7 +33,7 @@ public class CozinhaController implements CozinhaAPI {
 
     @Override
     public CozinhaDetalhadaResponse getCozinhasAtravesId(Long idCozinha) {
-        log.info("[inicio] CozinhaController - getCozinhasAtravesId");
+        log.info("[inicia] CozinhaController - getCozinhasAtravesId");
         CozinhaDetalhadaResponse cozinhaDetalhada = cozinhaService.buscaCozinhaAtravesDoId(idCozinha);
         log.info("[finaliza] CozinhaController - getCozinhasAtravesId");
         return cozinhaDetalhada;
@@ -40,7 +41,7 @@ public class CozinhaController implements CozinhaAPI {
 
     @Override
     public void deletaCozinhaAtravesId(Long idCozinha) {
-        log.info("[inicio] CozinhaController - deletaCozinhaAtravesId");
+        log.info("[inicia] CozinhaController - deletaCozinhaAtravesId");
         cozinhaService.deletaCozinhaAtravesId(idCozinha);
         log.info("[finaliza] CozinhaController - deletaCozinhaAtravesId");
 
@@ -48,7 +49,7 @@ public class CozinhaController implements CozinhaAPI {
 
     @Override
     public void putAlteraCozinha(Long idCozinha, CozinhaAlteracaoRequest cozinhaAlteracaoRequest) {
-        log.info("[inicio] CozinhaController - patchAlteraCozinha");
+        log.info("[inicia] CozinhaController - patchAlteraCozinha");
         cozinhaService.alteraCozinha(idCozinha,cozinhaAlteracaoRequest);
         log.info("[finaliza] CozinhaController - patchAlteraCozinha");
     }

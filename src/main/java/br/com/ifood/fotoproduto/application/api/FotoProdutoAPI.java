@@ -1,5 +1,7 @@
 package br.com.ifood.fotoproduto.application.api;
 
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoRequest;
+import br.com.ifood.fotoproduto.application.api.dto.FotoProdutoResponse;
 import br.com.ifood.security.annotations.CheckSecurity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,7 +19,7 @@ public interface FotoProdutoAPI {
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ResponseStatus(code = HttpStatus.CREATED)
     FotoProdutoResponse postAdicionarFoto(@PathVariable Long idRestaurante, @PathVariable Long idProduto,
-                                         @Valid FotoProdutoRequest fotoProdutoRequest) throws IOException;
+                                          @Valid FotoProdutoRequest fotoProdutoRequest) throws IOException;
     @CheckSecurity.Restaurantes.PodeConsultar
     @GetMapping(value = "/{idFotoProduto}" , produces = MediaType.ALL_VALUE)
     ResponseEntity<?> getFotoProduto (@PathVariable Long idRestaurante, @PathVariable Long idProduto,

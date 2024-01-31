@@ -1,8 +1,8 @@
 package br.com.ifood.endereco.domain;
 
 import br.com.ifood.cidade.domain.Cidade;
-import br.com.ifood.pedido.application.api.EnderecoEntrega;
-import br.com.ifood.restaurante.application.api.EnderecoRequest;
+import br.com.ifood.pedido.application.api.dto.EnderecoEntrega;
+import br.com.ifood.restaurante.application.api.dto.EnderecoRequest;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

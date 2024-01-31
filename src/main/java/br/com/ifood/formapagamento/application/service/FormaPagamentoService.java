@@ -1,7 +1,7 @@
 package br.com.ifood.formapagamento.application.service;
 
-import br.com.ifood.formapagamento.application.api.FormaPagamentoRequest;
-import br.com.ifood.formapagamento.application.api.FormaPagamentoResponse;
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoRequest;
+import br.com.ifood.formapagamento.application.api.dto.FormaPagamentoResponse;
 
 import java.util.List;
 

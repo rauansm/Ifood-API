@@ -1,6 +1,6 @@
 package br.com.ifood.cozinha.application.service;
 
-import br.com.ifood.cozinha.application.api.*;
+import br.com.ifood.cozinha.application.api.dto.*;
 
 import java.util.List;
 

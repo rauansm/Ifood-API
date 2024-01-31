@@ -1,7 +1,7 @@
 package br.com.ifood.cidade.domain;
 
-import br.com.ifood.cidade.application.api.CidadeAlteracaoRequest;
-import br.com.ifood.cidade.application.api.CidadeRequest;
+import br.com.ifood.cidade.application.api.dto.CidadeAlteracaoRequest;
+import br.com.ifood.cidade.application.api.dto.CidadeRequest;
 import br.com.ifood.estado.domain.Estado;
 import lombok.AllArgsConstructor;
 import lombok.Data;
