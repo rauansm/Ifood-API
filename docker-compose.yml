@@ -1,0 +1,28 @@
+version: '3.9'
+
+networks:
+  ifood-network:
+    driver: bridge
+
+services:
+  ifood-mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+    ports:
+      - 3306:3306
+    networks:
+      - ifood-network
+
+
+  ifood-api:
+    build: .
+    command: ["/app/wait-for-it.sh","ifood-mysql:3306", "-t", "30" ,"--" ,"java", "-jar", "api.jar"]
+    environment:
+      DB_HOST: ifood-mysql
+    ports:
+      - 8080:8080
+    networks:
+      - ifood-network
+    depends_on:
+      - ifood-mysql
