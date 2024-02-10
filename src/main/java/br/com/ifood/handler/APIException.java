@@ -53,7 +53,7 @@ public class APIException extends RuntimeException {
 		return new APIException(statusException, message, title);
 	}
 	public static APIException negocio(String message) {
-		return new APIException(HttpStatus.BAD_REQUEST, message, ProblemType.ERRO_negocio);
+		return new APIException(HttpStatus.BAD_REQUEST, message, ProblemType.ERRO_NEGOCIO);
 	}
 
 	private String getDescription(Exception e) {
