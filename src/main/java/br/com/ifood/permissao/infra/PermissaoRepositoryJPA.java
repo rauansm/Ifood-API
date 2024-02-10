@@ -29,6 +29,6 @@ public class PermissaoRepositoryJPA implements PermissaoRepository {
         log.info("[inicia] PermissaoRepositoryJPA - buscaPermissaoAtravesId");
         Optional<Permissao> permissao = permissaoSpringDataJPA.findById(idPermissao);
         log.info("[finaliza] PermissaoRepositoryJPA - buscaPermissaoAtravesId");
-        return permissao.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Permissão com Id %s não encontrada", idPermissao)));
+        return permissao.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Permissão com Id %s não encontrada", idPermissao)));
     }
 }

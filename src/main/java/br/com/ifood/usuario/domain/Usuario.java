@@ -59,13 +59,13 @@ public class Usuario {
     public void verificaSenha(SenhaAlteracaoRequest senhaAlteracaoRequest) {
         BCryptPasswordEncoder encriptador = new BCryptPasswordEncoder();
         if (!encriptador.matches(senhaAlteracaoRequest.getSenhaAtual(), this.senha)) {
-            throw APIException.Negocio("Senha incorreta!");
+            throw APIException.negocio("Senha incorreta!");
         }
         if (!senhaAlteracaoRequest.getNovaSenha().equals(senhaAlteracaoRequest.getConfirmaSenha())) {
-            throw APIException.Negocio("Senhas não coincidem!");
+            throw APIException.negocio("Senhas não coincidem!");
         }
         if (encriptador.matches(senhaAlteracaoRequest.getNovaSenha(), this.senha)) {
-            throw APIException.Negocio("Senha usada anteriormente!");
+            throw APIException.negocio("Senha usada anteriormente!");
         }
     }
 

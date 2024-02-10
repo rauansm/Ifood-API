@@ -46,11 +46,4 @@ public class ProdutoController implements ProdutoAPI{
         log.info("[finaliza] ProdutoController - putAlteraProduto");
     }
 
-//    @Override
-//    public FotoProdutoResponse putAdicionarFoto(Long idRestaurante, Long idProduto, FotoProdutoRequest fotoProdutoRequest) {
-//        log.info("[inicia] ProdutoController - putAdicionarFoto");
-//        FotoProdutoResponse  foto = produtoService.adicionarFoto(idRestaurante,idProduto,fotoProdutoRequest);
-//        log.info("[finaliza] ProdutoController - putAdicionarFoto");
-//        return foto;
-
 }

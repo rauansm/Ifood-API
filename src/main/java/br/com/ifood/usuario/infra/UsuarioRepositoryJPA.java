@@ -38,13 +38,13 @@ public class UsuarioRepositoryJPA implements UsuarioRepository {
         log.info("[inicia] UsuarioRepositoryJPA - buscaUsuarioAtravesId");
         Optional<Usuario> usuario = usuarioSpringDataJPA.findById(idUsuario);
         log.info("[finaliza] UsuarioRepositoryJPA - buscaUsuarioAtravesId");
-        return usuario.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Usuario com Id %s não encontrado", idUsuario)));
+        return usuario.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Usuario com Id %s não encontrado", idUsuario)));
     }
 
     public Usuario findByEmail(String email) {
         log.info("[inicia] UsuarioRepositoryJPA - findByEmail");
         Optional<Usuario> usuario = usuarioSpringDataJPA.findByEmail(email);
         log.info("[finaliza] UsuarioRepositoryJPA - findByEmail");
-        return usuario.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Usuario com email %s não encontrado", email)));
+        return usuario.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Usuario com email %s não encontrado", email)));
     }
 }

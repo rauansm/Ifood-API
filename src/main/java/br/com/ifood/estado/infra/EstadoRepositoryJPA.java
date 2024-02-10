@@ -31,7 +31,7 @@ public class EstadoRepositoryJPA implements EstadoRepository {
         log.info("[inicia] EstadoRepositoryJPA - buscaEstadoAtravesId");
         Optional<Estado> estado = estadoSpringDataJPA.findById(idEstado);
         log.info("[finaliza] EstadoRepositoryJPA - buscaEstadoAtravesId");
-        return estado.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Estado de Id %s não encontrado", idEstado)));
+        return estado.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Estado de Id %s não encontrado", idEstado)));
     }
 
     @Override
@@ -51,7 +51,7 @@ public class EstadoRepositoryJPA implements EstadoRepository {
         estadoSpringDataJPA.flush();
         log.info("[finaliza] EstadoRepositoryJPA - deletaEstado");
     } catch (DataIntegrityViolationException e) {
-            throw APIException.EntidadeEmUso(String.format("Estado de código %d não pode ser removido, pois está em uso", estado.getIdEstado()));
+            throw APIException.entidadeEmUso(String.format("Estado de código %d não pode ser removido, pois está em uso", estado.getIdEstado()));
         }
     }
 }

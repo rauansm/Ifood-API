@@ -120,7 +120,7 @@ public class Restaurante {
 
     public void naoAceitaFormaPagamento(FormaPagamento formaPagamento) {
         if (!this.formasPagamento.contains(formaPagamento)) {
-            throw APIException.Negocio(String.format("Forma de pagamento '%s' não é aceita por esse restaurante.",
+            throw APIException.negocio(String.format("Forma de pagamento '%s' não é aceita por esse restaurante.",
                     formaPagamento.getDescricao()));
         }
     }

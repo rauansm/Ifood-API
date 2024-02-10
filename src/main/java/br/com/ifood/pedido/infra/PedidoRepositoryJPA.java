@@ -31,7 +31,7 @@ public class PedidoRepositoryJPA implements PedidoRepository {
         log.info("[inicia] PedidoRepositoryJPA - buscaPedidoAtravesCodigo");
         Optional<Pedido> pedido = pedidoSpringDataJPA.findByCodigoPedido(codigoPedido);
         log.info("[finaliza] PedidoRepositoryJPA - buscaPedidoAtravesCodigo");
-        return pedido.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Pedido de código %s não encontrado", codigoPedido)));
+        return pedido.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Pedido de código %s não encontrado", codigoPedido)));
     }
 
     @Override

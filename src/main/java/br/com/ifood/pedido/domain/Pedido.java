@@ -91,7 +91,7 @@ public class Pedido extends AbstractAggregateRoot<Pedido> {
 
     public void confirmaPedido() {
         if (status.equals(StatusPedido.ENTREGUE) || status.equals(StatusPedido.CANCELADO) || status.equals(StatusPedido.CONFIRMADO )){
-            throw APIException.Negocio("Pedido não pode ser Confirmado!");}
+            throw APIException.negocio("Pedido não pode ser Confirmado!");}
             this.status = StatusPedido.CONFIRMADO;
             this.dataConfirmacao = LocalDateTime.now();
 
@@ -100,14 +100,14 @@ public class Pedido extends AbstractAggregateRoot<Pedido> {
 
     public void entregaPedido() {
         if (status.equals(StatusPedido.CRIADO) || status.equals(StatusPedido.CANCELADO) || status.equals(StatusPedido.ENTREGUE )) {
-            throw APIException.Negocio("Pedido não pode ser Entregue!");}
+            throw APIException.negocio("Pedido não pode ser Entregue!");}
         this.status = StatusPedido.ENTREGUE;
         this.dataEntrega = LocalDateTime.now();
     }
 
     public void cancelaPedido() {
         if (status.equals(StatusPedido.CONFIRMADO) || status.equals(StatusPedido.ENTREGUE) || status.equals(StatusPedido.CANCELADO ) ) {
-            throw APIException.Negocio("Pedido não pode ser Cancelado!");}
+            throw APIException.negocio("Pedido não pode ser Cancelado!");}
         this.status = StatusPedido.CANCELADO;
         this.dataCancelamento = LocalDateTime.now();
     }

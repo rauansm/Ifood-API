@@ -14,5 +14,4 @@ public interface ProdutoService {
 
     void alteraProduto(Long idProduto, Long idRestaurante, ProdutoRequest produtoRequest);
 
-//    FotoProdutoResponse adicionarFoto(Long idRestaurante, Long idProduto,   FotoProdutoRequest fotoProdutoRequest);
 }

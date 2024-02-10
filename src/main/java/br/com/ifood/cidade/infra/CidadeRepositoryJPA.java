@@ -41,7 +41,7 @@ public class CidadeRepositoryJPA implements CidadeRepository {
         log.info("[inicia] CidadeRepositoryJPA - buscaCidadeAtravesId");
         Optional<Cidade> cidade = cidadeSpringDataJPA.findById(idCidade);
         log.info("[finaliza] CidadeRepositoryJPA - buscaCidadeAtravesId");
-        return cidade.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Cidade de Id %s não encontrada", idCidade)));
+        return cidade.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Cidade de Id %s não encontrada", idCidade)));
     }
 
     @Override
@@ -52,7 +52,7 @@ public class CidadeRepositoryJPA implements CidadeRepository {
            cidadeSpringDataJPA.flush();
            log.info("[finaliza] CidadeRepositoryJPA - deletaCidadeAtravesId");
        }catch (DataIntegrityViolationException e) {
-           throw APIException.EntidadeEmUso(String.format("Cidade de código %d não pode ser removida, pois está em uso", cidade.getIdCidade()));
+           throw APIException.entidadeEmUso(String.format("Cidade de código %d não pode ser removida, pois está em uso", cidade.getIdCidade()));
        }
     }
 }

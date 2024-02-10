@@ -40,7 +40,7 @@ public class CozinhaRepositoryJPA implements CozinhaRepository {
         log.info("[inicio] CozinhaRepositoryJPA - buscaCozinhaPeloId");
         Optional<Cozinha> cozinha = cozinhaSpringDataJPA.findById(idCozinha);
         log.info("[finaliza] CozinhaRepositoryJPA - buscaCozinhaPeloId");
-        return cozinha.orElseThrow(() ->  APIException.EntidadeNaoEncontrada(String.format("Cozinha de id %s não encontrada", idCozinha)));
+        return cozinha.orElseThrow(() ->  APIException.entidadeNaoEncontrada(String.format("Cozinha de id %s não encontrada", idCozinha)));
     }
 
     @Override
@@ -51,7 +51,7 @@ public class CozinhaRepositoryJPA implements CozinhaRepository {
             cozinhaSpringDataJPA.flush();
             log.info("[finaliza] CozinhaRepositoryJPA - deletaCozinha");
         } catch (DataIntegrityViolationException e) {
-        throw APIException.EntidadeEmUso(String.format("Cozinha de código %d não pode ser removida, pois está em uso", cozinha.getIdCozinha()));
+        throw APIException.entidadeEmUso(String.format("Cozinha de código %d não pode ser removida, pois está em uso", cozinha.getIdCozinha()));
         }
     }
 }

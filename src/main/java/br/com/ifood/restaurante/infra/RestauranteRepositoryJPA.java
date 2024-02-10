@@ -38,7 +38,7 @@ public class RestauranteRepositoryJPA implements RestauranteRepository {
         log.info("[inicia] RestauranteRepositoryJPA - buscaRestauranteAtravesId");
         Optional<Restaurante> restaurante = restauranteSpringDataJPA.findById(idRestaurante);
         log.info("[finaliza] RestauranteRepositoryJPA - buscaRestauranteAtravesId");
-        return restaurante.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Restaurante de Id %s não encontrado", idRestaurante)));
+        return restaurante.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Restaurante de Id %s não encontrado", idRestaurante)));
     }
 
     @Override

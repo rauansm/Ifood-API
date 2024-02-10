@@ -22,7 +22,7 @@ public class UsuarioRequest {
 
     public void validaSenha() {
         if (!this.senha.equals(this.confirmaSenha)) {
-            throw APIException.Negocio("Senhas não coincidem!");
+            throw APIException.negocio("Senhas não coincidem!");
         }
     }
 }

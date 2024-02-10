@@ -38,10 +38,10 @@ public class APIException extends RuntimeException {
 					.build();
 		}
 
-	public static APIException EntidadeNaoEncontrada(String message) {
+	public static APIException entidadeNaoEncontrada(String message) {
 		return new APIException(HttpStatus.NOT_FOUND, message, ProblemType.RECURSO_NAO_ENCONTRADO);
 	}
-	public static APIException EntidadeEmUso(String message) {
+	public static APIException entidadeEmUso(String message) {
 		return new APIException(HttpStatus.BAD_REQUEST, message, ProblemType.ENTIDADE_EM_USO);
 	}
 
@@ -52,8 +52,8 @@ public class APIException extends RuntimeException {
 	public static APIException build(HttpStatus statusException, String message, ProblemType title) {
 		return new APIException(statusException, message, title);
 	}
-	public static APIException Negocio(String message) {
-		return new APIException(HttpStatus.BAD_REQUEST, message, ProblemType.ERRO_NEGOCIO);
+	public static APIException negocio(String message) {
+		return new APIException(HttpStatus.BAD_REQUEST, message, ProblemType.ERRO_negocio);
 	}
 
 	private String getDescription(Exception e) {

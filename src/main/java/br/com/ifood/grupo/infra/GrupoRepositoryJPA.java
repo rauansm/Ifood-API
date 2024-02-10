@@ -39,7 +39,7 @@ public class GrupoRepositoryJPA implements GrupoRepository {
         log.info("[inicia] GrupoRepositoryJPA - buscaGrupoAtravesId");
         Optional<Grupo> grupo = grupoSpringDataJPA.findById(idGrupo);
         log.info("[finaliza] GrupoRepositoryJPA - buscaGrupoAtravesId");
-        return grupo.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Grupo com Id %s não encontrado", idGrupo)));
+        return grupo.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Grupo com Id %s não encontrado", idGrupo)));
     }
 
     @Override
@@ -50,7 +50,7 @@ public class GrupoRepositoryJPA implements GrupoRepository {
         grupoSpringDataJPA.flush();
         log.info("[finaliza] GrupoRepositoryJPA - deletaGrupo");
     } catch (DataIntegrityViolationException e) {
-        throw APIException.EntidadeEmUso(String.format("Grupo de código %d não pode ser removida, pois está em uso", grupo.getIdGrupo()));
+        throw APIException.entidadeEmUso(String.format("Grupo de código %d não pode ser removida, pois está em uso", grupo.getIdGrupo()));
     }
     }
 }

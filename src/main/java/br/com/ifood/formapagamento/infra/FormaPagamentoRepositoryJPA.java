@@ -40,7 +40,7 @@ public class FormaPagamentoRepositoryJPA implements FormaPagamentoRepository {
         log.info("[inicia] FormaPagamentoRepositoryJPA - buscaFormaPagamentoAtravesId");
         Optional<FormaPagamento> formaPagamento = formaPagamentoSpringDataJPA.findById(idPagamento);
         log.info("[finaliza] FormaPagamentoRepositoryJPA - buscaFormaPagamentoAtravesId");
-        return formaPagamento.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Forma de Pagamento com Id %s não encontrada", idPagamento)));
+        return formaPagamento.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Forma de Pagamento com Id %s não encontrada", idPagamento)));
     }
 
     @Override
@@ -51,7 +51,7 @@ public class FormaPagamentoRepositoryJPA implements FormaPagamentoRepository {
         formaPagamentoSpringDataJPA.flush();
         log.info("[finaliza] FormaPagamentoRepositoryJPA - deletaFormaPagamento");
     } catch (DataIntegrityViolationException e) {
-        throw APIException.EntidadeEmUso(String.format("Forma de Pagamento de código %d não pode ser removida, pois está em uso", formaPagamento.getIdPagamento()));
+        throw APIException.entidadeEmUso(String.format("Forma de Pagamento de código %d não pode ser removida, pois está em uso", formaPagamento.getIdPagamento()));
     }
 
     }

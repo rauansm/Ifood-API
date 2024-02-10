@@ -29,7 +29,7 @@ public class FotoProdutoRepositoryJPA implements FotoProdutoRepository {
         log.info("[inicia] FotoProdutoRepositoryJPA - buscaFotoProduto");
         Optional<FotoProduto> fotoProduto = fotoProdutoSpringDataJPA.findByProduto(produto,idFotoProduto);
         log.info("[finaliza] FotoProdutoRepositoryJPA - buscaFotoProduto");
-        return fotoProduto.orElseThrow(() -> APIException.EntidadeNaoEncontrada(String.format("Foto do Produto %s com Id %s não encontrada", produto.getNome(),idFotoProduto)));
+        return fotoProduto.orElseThrow(() -> APIException.entidadeNaoEncontrada(String.format("Foto do Produto %s com Id %s não encontrada", produto.getNome(),idFotoProduto)));
     }
 
     @Override

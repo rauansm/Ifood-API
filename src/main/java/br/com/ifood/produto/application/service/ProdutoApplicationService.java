@@ -62,12 +62,4 @@ public class ProdutoApplicationService implements ProdutoService {
 
     }
 
-//    @Override
-//    public FotoProdutoResponse adicionarFoto(Long idRestaurante, Long idProduto,   FotoProdutoRequest fotoProdutoRequest) {
-//        log.info("[inicia] ProdutoApplicationService - adicionarFoto");
-//        Produto produto = produtoRepository.buscaProdutoDoRestaurante(idRestaurante,idProduto);
-//        FotoProduto foto = produtoRepository.salvaFotoProduto(new FotoProduto(produto,fotoProdutoRequest));
-//        log.info("[finaliza] ProdutoApplicationService - adicionarFoto");
-//    return new FotoProdutoResponse(foto);
-//    }
 }
